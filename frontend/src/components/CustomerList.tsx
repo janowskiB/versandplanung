@@ -5,12 +5,12 @@ export default function CustomerList() {
 
     return (
         <>
-        <h2>Customer List</h2>
-        <ul>
-            {customers.map((customer) => (
-                <li key={customer.id}>{customer.firstname} - {customer.lastname}</li>
-            ))}
-        </ul>
+            <h2>Customer List</h2>
+            <ul>
+                {customers.map((customer) => (
+                    <li key={customer.id}>{customer.firstname} - {customer.lastname} - {customer.type}</li>
+                ))}
+            </ul>
         </>
     );
 }
