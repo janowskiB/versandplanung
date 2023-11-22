@@ -1,20 +1,23 @@
 package com.example.backend.Employee;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin("*")
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api/employees")
-@RequiredArgsConstructor
 public class EmployeeController {
-    private final EmployeeService employeeService;
+    private EmployeeServiceImpl employeeService;
 
     @GetMapping
-    List<Employee> getEmployees() {
-        return employeeService.getEmployees();
+    public List<EmployeeDto> getAllEmployees() {
+        return employeeService.getAllEmployees();
     }
+
 }

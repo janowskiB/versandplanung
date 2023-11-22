@@ -2,5 +2,7 @@ export type Customer = {
     id: number;
     firstname: string;
     lastname: string;
-    type: string;
+    email: string;
+    address: string;
+    phone: number;
 }

@@ -1,4 +1,4 @@
-package com.example.backend.Fleet;
+package com.example.backend.Route;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "fleets")
-public class Fleet {
+@Table(name = "routes")
+public class Route {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private int id;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "type")
-    private String type;
-    @Column(name = "status")
-    private String status;
+    @Column(name = "start")
+    private String start;
+    @Column(name = "finish")
+    private String finish;
+    @Column(name = "distance")
+    private int distance;
 }

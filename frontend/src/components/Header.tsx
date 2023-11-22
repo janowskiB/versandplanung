@@ -43,6 +43,9 @@ export default function Header() {
                         <MenuItem onClick={() => handleNavigate("/fleets")}>
                             Fuhrpark
                         </MenuItem>
+                        <MenuItem onClick={() => handleNavigate("/routes")}>
+                            Routen
+                        </MenuItem>
                     </Menu>
 
                     <Link href="/" color="inherit" underline="none" flexGrow={1}>

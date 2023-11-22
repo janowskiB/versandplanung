@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import RouteList from "./pages/RouteList";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/customers" element={<CustomerList/>}/>
                 <Route path="/employees" element={<EmployeeList/>}/>
                 <Route path="/fleets" element={<FleetList/>}/>
+                <Route path="/routes" element={<RouteList/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>

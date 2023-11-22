@@ -1,4 +1,4 @@
-package com.example.backend.Fleet;
+package com.example.backend.Route;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,12 +11,12 @@ import java.util.List;
 @CrossOrigin("*")
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/fleets")
-public class FleetController {
-    private final FleetService fleetService;
+@RequestMapping("/api/routes")
+public class RouteController {
+    private RouteServiceImpl routeService;
 
     @GetMapping
-    public List<FleetDto> getAllFleets() {
-        return fleetService.getAllFleets();
+    public List<RouteDto> getAllRoutes() {
+        return routeService.getAllRoutes();
     }
 }
